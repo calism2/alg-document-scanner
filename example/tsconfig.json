@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "alg-document-scanner": ["../src/index"],
+      "alg-document-scanner/*": ["../src/*"]
+    }
+  }
+}
