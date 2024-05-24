@@ -9,8 +9,14 @@ import { ChangeEventPayload, AlgDocumentScannerViewProps } from './AlgDocumentSc
 // Get the native constant value.
 export const PI = AlgDocumentScannerModule.PI;
 
-export function hello(): string {
-  return AlgDocumentScannerModule.hello();
+export type ScanResult = {
+  url: string,
+  width: number,
+  height: number
+}
+
+export async function scan() : Promise<ScanResult[]> {
+  return await AlgDocumentScannerModule.scan();
 }
 
 export async function setValueAsync(value: string) {
